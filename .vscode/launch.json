@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/pann/uni/OOP/WS5",
-      "program": "d:/pann/uni/OOP/WS5/build/Debug/outDebug",
+      "cwd": "d:/pann/uni/OOP",
+      "program": "d:/pann/uni/OOP/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
