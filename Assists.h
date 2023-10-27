@@ -12,7 +12,7 @@ using namespace std;
 class Assists {
  private:
  public:
-  std::tuple<int, int> createRandomLoc(int matrixWidth, int matrixHeight) {
+  static std::tuple<int, int> createRandomLoc(int matrixWidth, int matrixHeight) {
     int x = rand() % matrixWidth + 0;
     int y = rand() % matrixHeight + 0;
     return std::make_tuple(x, y);
