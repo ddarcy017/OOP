@@ -39,32 +39,31 @@ public:
         }
     }
 
-    void Play::playCycle(int maxCycles, double snareTriggerDistance) {
-    for (int cycle = 0; cycle < maxCycles; cycle++) {
-        for (Spot* spot : matrix) {
-            if (spot->getCategory() == 'P') {
-                Persona* persona = static_cast<Persona*>(spot);
-                persona->shift(1, 0);
+    void playCycle(int maxCycles, double snareTriggerDistance) {
+        for (int cycle = 0; cycle < maxCycles; cycle++) {
+            for (Spot* spot : matrix) {
+                if (spot->getCategory() == 'P') {
+                    Persona* persona = static_cast<Persona*>(spot);
+                    persona->shift(1, 0);
 
-                if (std::get<0>(spot->getLoc()) > this->matrixWidth) {
-                    std::cout << "Persona has won the game!" << std::endl;
-                    return;
-                }
+                    if (std::get<0>(spot->getLoc()) > this->matrixWidth) {
+                        std::cout << "Persona has won the game!" << std::endl;
+                        return;
+                    }
 
-                for (Spot* innerSpot : matrix) {
-                    if (innerSpot->getCategory() == 'S' &&
-                        Assists::evaluateDistance(spot->getLoc(), innerSpot->getLoc()) <= snareTriggerDistance) {
-                        Snare* snare = static_cast<Snare*>(innerSpot);
-                        snare->implement(*persona);
+                    for (Spot* innerSpot : matrix) {
+                        if (innerSpot->getCategory() == 'S' &&
+                            Assists::evaluateDistance(spot->getLoc(), innerSpot->getLoc()) <= snareTriggerDistance) {
+                            Snare* snare = static_cast<Snare*>(innerSpot);
+                            snare->implement(*persona);
+                        }
                     }
                 }
             }
         }
-    }
 
-    std::cout << "Maximum number of cycles reached. Game over." << std::endl;
+        std::cout << "Maximum number of cycles reached. Game over." << std::endl;
     }
-
 };
 
 #endif
