@@ -1,28 +1,24 @@
 #ifndef SPOT_H
 #define SPOT_H
 
-#include <iostream>
 #include <tuple>
-#include <vector>
 
-class Spot{
-    private:
+class Spot {
+private:
     std::tuple<int, int> location;
     char category;
 
-    public:
-    
+public:
     Spot(int x, int y, char type) {
-        this->location = make_tuple(x, y);
-        this->category = category;
+        this->location = std::make_tuple(x, y);
+        this->category = type;
     }
 
-    std::tuple<int, int> getLoc() {return this->location; };
+    std::tuple<int, int> getLoc() { return this->location; };
 
-    char getCategory() {return this->category; };
-    void setLoc(int x, int y) {this->location = make_tuple(x, y); };
-    void setCategory(char category) {this->category = category; };
-
-    };
+    char getCategory() { return this->category; };
+    void setLoc(int x, int y) { this->location = std::make_tuple(x, y); };
+    void setCategory(char category) { this->category = category; };
+};
 
 #endif
