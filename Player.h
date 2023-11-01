@@ -16,6 +16,7 @@ class Player {
     
     int get_health(){return health;}
     int get_damage() {return damage;}
+    
 };
 
 #endif
