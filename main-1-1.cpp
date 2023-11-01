@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "player.h"
 #include "wizard.h"
