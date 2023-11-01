@@ -3,12 +3,19 @@
 
 #include "Player.h"
 
+#include <cstdlib>
+#include <ctime>
+
 class Wizard : public Player {
+
     private:
-    int mana;
+        int mana;
 
     public:
-    void cast_spell (Player* opponent);
+        Wizard(std::string name, int health, int damage, int mana);
+        void castSpell (Player* opponent);
+        int getMana();
 
 };
+
 #endif

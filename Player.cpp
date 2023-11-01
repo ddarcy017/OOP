@@ -1,29 +1,23 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player(std::string name, int health, int damage) {
-    this->name = name;
-    this->health = health;
-    this->damage = damage;
-}
+using namespace std;
+
+Player::Player(std::string name, int health, int damage) : name(name), health(health), damage(damage) {}
 
 void Player::attack (Player* opponent, int damage) {
-    opponent-> health -= damage;
+    opponent->health -= damage;
 }
 
 void Player::takeDamage (int damage) {
     std::cout << name << " takes " << damage << " damage. Remaining health: " << health << "\n";
 }
 
-int Player::get_health() {
-    std::cout << "Remaining health: " << health << "\n";
-    return health;
-}
+string Player::getName() {return name;}
+int Player::getHealth(){return health;}
+int Player::getDamage() {return damage;}
 
-int Player::get_damage() {
-    std::cout << "Damage dealed: " << damage << std::endl;
-    return damage;
-}
+
 
 
 

@@ -4,7 +4,7 @@
 #include <string>
 
 class Player {
-    private:
+    protected:
     std::string name;
     int health;
     int damage;
@@ -13,9 +13,10 @@ class Player {
     Player (std::string name, int health, int damage);
     void attack(Player* opponent, int damage);
     void takeDamage(int damage);
-    
-    int get_health(){return health;}
-    int get_damage() {return damage;}
+
+    std::string getName();
+    int getHealth();
+    int getDamage(); 
     
 };
 

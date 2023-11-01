@@ -8,7 +8,9 @@ class Warrior : public Player {
     std::string weapon;
 
     public:
-    void swingWeapon (Player* opponent); 
+    Warrior(std::string name,int health, int damage,std::string weapon);
+    void swingWeapon (Player* opponent);
+    std::string getWeapon();
 
 };
 #endif
