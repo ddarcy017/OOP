@@ -1,4 +1,4 @@
-//overriding, overloading
+//Overriding, Overloading
 #include <iostream>
 #include <cstring>
 class Book {
@@ -29,7 +29,8 @@ public:
     Publication(std::string title ,int page, std::string publisher, int year) 
     : Book(title, page) , publisher(publisher), year(year) {}; // Constructor
 
-// void print() { // Overriding
+// Overriding: Same function name, same function, diff output context
+// void print() { 
 //     Book::print();
 //     std::cout << "Publisher: " << this->publisher << std::endl;
 //     std::cout << "Year: "  << this->year << std::endl;
@@ -40,8 +41,8 @@ public:
 //     return year < update_year;
 // }
 
-
-void print(bool isOld) { // Overloading
+// Overloading: Same function, diff pẩmeter
+void print(bool isOld) { 
     if (isOld) {
         Book::print();
     }else{
