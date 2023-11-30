@@ -1,0 +1,2 @@
+If an abstract class is inherited, it should contain all of the functions from
+the derived class 

@@ -1,3 +1,5 @@
+#include <iostream>
+
 struct Point {
     double x;
     double y;
@@ -29,4 +31,5 @@ class Square : public Shape {
 
 int main () {
     Square s;
+    std::cout << s.get_area() << std::endl;
 }
