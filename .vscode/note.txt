@@ -1,2 +1,4 @@
 If an abstract class is inherited, it should contain all of the functions from
 the derived class 
+
+Polymorphism allows you to use a base class pointer to refer to objects of derived classes and call their member functions.
