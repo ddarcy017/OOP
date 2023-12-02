@@ -46,6 +46,7 @@ int main() {
 
     Pair<Point<int>, Point<double> > line1_2(p1,p2);
 
+    return 0;
 
 
 }
