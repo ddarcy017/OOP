@@ -1,7 +1,7 @@
 #include <iostream>
 
 class Printable { // Interfaces, Pure abstract class
-                 // Use for non related class but common functionality (Print in this case)
+                  // Use for non related class but common functionality (Print in this case)
     public:
     virtual void print() = 0; // ONLY has a pure virtual function
 };
@@ -11,7 +11,7 @@ struct Point {
     double y;
 };
 
-class Shape : public Printable{
+class Shape : public Printable {
     protected: //For inheritance
     Point _centre;
 
