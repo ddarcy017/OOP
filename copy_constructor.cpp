@@ -47,7 +47,7 @@ public:
     }
 
     virtual ~Point() { // Des str 
-                      //Set to virtual to overwrite in 3d
+                       //Set to virtual to overwrite in 3d
     delete _x;
     delete _y;
     }

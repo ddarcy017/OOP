@@ -1,5 +1,5 @@
 // Static binding: To call a function that belongs to the specific class
-                    // of the object at compile time
+                // of the object at compile time
 
 
 #include <iostream>
@@ -16,7 +16,7 @@ public:
         this->page = page;
     }; 
     
-    virtual void print() { // Adding virtual for runtime diff version of enitty
+    virtual void print() { // Adding virtual for runtime diff version of entity
         std::cout << "Title: " << this->title << std::endl;
         std::cout << "Page: " << this->page << std::endl;
     };

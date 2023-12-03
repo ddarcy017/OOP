@@ -41,7 +41,7 @@ public:
 //     return year < update_year;
 // }
 
-// Overloading: Same function, diff pẩmeter
+// Overloading: Same function, diff parameter
 void print(bool isOld) { 
     if (isOld) {
         Book::print();

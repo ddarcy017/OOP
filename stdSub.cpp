@@ -42,4 +42,4 @@ cout << **(&a[0]) << endl; //Return first ele of array
 
 // -> Point to base class
 // If virtual, running both
-// If non vietual, run the base
+// If non virtual, run the base
