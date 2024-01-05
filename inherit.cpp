@@ -1,32 +1,30 @@
 #include <iostream>
 using namespace std;
 
+struct Point {
+    int x;
+    int y;
+};
+
 class A {
-    protected:
-    int _x;
-    public:
-    A(): _x(100){};
-    virtual void foo(){
-        cout << this->_x <<endl;
-    }
-};
-class B: public A {
     private:
-    int _y;
+    Point* _p;
     public:
-    B(): _y(200){};
-    void foo(){cout << this->_x <<"," <<this->_y<<endl;}
-    
+    A(){_p = new Point{10,10};};
+    void set_p(int x, int y){
+        _p->x =x;
+        _p->y = y;
+    }
+
+    Point get_p(){return *_p;}
 };
-
-void test(A* a){
-    a->foo();
-}
-
 
 int main(){
-    B b;
-    test(&b);
+    A a1;
+    a1.set_p(500,500);
+    A a2 =a1;
+    a1.set_p(3,5);
+    std::cout << a2.get_p().x << "," <<a2.get_p().y <<std::endl;
 
     return 0;
 }

@@ -12,7 +12,8 @@ typedef Point<int> Point_i;
 
 int main(){
     vector<Point_i*> v;
-    v.push_back(new Point_i);
-    cout << v.size() << endl;
+    Point_i* p = new Point_i;
+    v.push_back(p);
+    cout << v[0]->_x << endl; //Segmentation fault
     return 0;
 }
